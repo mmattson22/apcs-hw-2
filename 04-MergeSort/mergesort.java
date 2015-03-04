@@ -3,9 +3,6 @@ import java.util.*;
 
 public class mergesort {
     
-    //ARRAYLIST
-    
-    
     public ArrayList<Integer> merge(ArrayList<Integer> pile1, ArrayList<Integer> pile2) {
         ArrayList<Integer> combined = new ArrayList<Integer>();
         while(pile1.size() > 0 && pile2.size() > 0) {
@@ -56,7 +53,7 @@ public class mergesort {
         ArrayList<Integer> A = new ArrayList<Integer>();
         Random rn = new Random();
         for (int i = 0; i < 10; i++) {
-            A.add(rn.nextInt(15));
+            A.add(rn.nextInt(30));
         }
         System.out.println(A);
         System.out.println(m.mergeSort(A));
