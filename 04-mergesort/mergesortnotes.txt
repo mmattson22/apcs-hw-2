@@ -1,0 +1,4 @@
+As we go down an array to split it apart, we have to copy every element of the array down to the next level.  Each split loops through the array, giving a linear time function n. On the way back up as the sorting actually happens, we do the same amount of work, but in reverse. This means that each merge is also of a time function n.  There are log(base2)n, so the time of the sort is nlog(n)
+
+big O notation:
+A function f(n) is said to be O(g(n)) if there exists some constant such that k(g(n))>f(n) over the long term. This kind of notation is meant to set a tight upper bound.
