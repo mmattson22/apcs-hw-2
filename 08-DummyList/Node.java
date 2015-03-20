@@ -1,31 +1,28 @@
-public class Node {
+public class Node<E>{
+    private E data;
+    private Node<E> next;
     
-    private String data;
-    private Node next;  //kind of like a recursive data structure
-    
-    public Node(String s) {
+    public Node(){
+        data = null;
+        next = null;
+    }
+    public Node(E s){
         data = s;
         next = null;
     }
-    
-    public void setData(String s) {
+    public void setData(E s){
         data = s;
     }
-    
-    public String getData() {
+    public E getData(){
         return data;
     }
-    
-    public void setNext(Node n) {
+    public void setNext(Node<E> n){
         next = n;
     }
-    
-    public Node getNext() {
+    public Node<E> getNext(){
         return next;
     }
-    
-    public String toString() {
-        return data;
+    public String toString(){
+        return ""+data;
     }
-    
 }

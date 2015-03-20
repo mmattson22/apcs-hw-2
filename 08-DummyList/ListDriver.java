@@ -1,23 +1,30 @@
-import java.util.*;
-
 public class ListDriver{
-    
     public static void main(String[] args) {
-        Random r = new Random();
-        LList l = new LList();
-        for (int i = 0; i < 10; i++){
-            l.add(""+i);
+        LList<String> l = new LList<String>();
+        
+        l.add("Hello");
+        l.add("world");
+        l.add("abc");
+        l.add("something");
+        l.add("else");
+        
+        System.out.println(l);
+        
+        LList<Integer> l2 = new LList<Integer>();
+        for (int i=0;i < 5; i++){
+            l2.add(i);
         }
-        System.out.println(l);
-        System.out.println(l.get(4));
-        l.add(4,"C");
-        System.out.println(l);
-        l.add(0,"sup");
-        System.out.println(l);
-        System.out.println(l.getLength());
-        l.remove(4);
-        System.out.println(l);
-        System.out.println(l.getLength());
+        
+        System.out.println(l2);
+        
+        LLit<String> i = l.getLLit();
+        while (i.hasNext())
+            System.out.println(i.next());
+        
+        LLit<Integer> i2 = l2.getLLit();
+        while (i2.hasNext())
+            System.out.println(i2.next());
+        
+        
     }
-    
 }
