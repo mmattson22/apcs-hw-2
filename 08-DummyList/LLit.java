@@ -1,4 +1,7 @@
-public class LLit<E>{
+import java.io.*;
+import java.util.*;
+
+public class LLit<E> implements Iterator<E>{
     private Node<E> t;
     public LLit(Node<E> n){
         t=n;
@@ -12,5 +15,9 @@ public class LLit<E>{
         E retval = t.getData();
         t=t.getNext();
         return retval;
+    }
+    
+    public void remove() {
+        // fill this in later
     }
 }

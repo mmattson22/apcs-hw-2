@@ -1,11 +1,14 @@
-public class LList<E>{
+import java.io.*;
+import java.util.*;
+
+public class LList<E> implements Iterable<E>{
     private Node<E> l;
     
     public LList(){
         l = new Node<E>();
     }
     
-    public LLit<E> getLLit(){
+    public Iterator<E> iterator(){
         LLit<E> i = new LLit<E>(l.getNext());
         return i;
     }
