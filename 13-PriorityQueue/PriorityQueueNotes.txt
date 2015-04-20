@@ -1,0 +1,2 @@
+Helps us perform the Best First Search
+when you add each node to the frontier, you first assign a prioroty.\
