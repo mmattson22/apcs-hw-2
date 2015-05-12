@@ -196,6 +196,27 @@ public class BST {
         }
     }
     
+    public void splitDupes(Node t) {
+        if (t == null) {
+            return;
+        }
+        Node extra = new Node(t.getData() - 1);
+        if (t.getLeft() != null &&
+            t.getData() == t.getLeft().getData()) {
+            Node tmp = t.getLeft();
+            t.setLeft(extra);
+            extra.setLeft(tmp);
+        }
+        if (t.getRight() != null &&
+            t.getData() == t.getRight().getData()) {
+            Node tmp = t.getRight();
+            t.setRight(extra);
+            extra.setRight(tmp);
+        }
+        splitDupes(t.getLeft());
+        splitDupes(t.getRight());
+    }
+    
     public static void main(String[] args) {
         Node n = new Node(17);
         BST b = new BST(n);
