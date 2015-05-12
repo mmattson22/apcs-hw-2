@@ -175,7 +175,26 @@ public class BST {
         }
         return val;
     }
-
+    
+    public int height(Node t) {
+        if (t == null) {
+            return 0;
+        } else {
+            return 1 + Math.max(height(t.getLeft()), height(t.getRight()));
+        }
+    }
+    
+    public int longest(Node t){
+        if (t == null) {
+            return 0;
+        }else{
+            int cur = height(t.getLeft()) + height(t.getRight()) + 1;
+            int L = longest(t.getLeft());
+            int R = longest(t.getRight());
+            
+            return Math.max(cur, Math.max(L,R));
+        }
+    }
     
     public static void main(String[] args) {
         Node n = new Node(17);
@@ -200,6 +219,8 @@ public class BST {
         
         System.out.println(b.traverse(n));
         System.out.println(b.maxVal(n));
+        System.out.println(b.height(n));
+        System.out.println(b.longest(n));
     }
     
 }
